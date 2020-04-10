@@ -9,7 +9,20 @@ const io = require('socket.io')(server);
 
 //listen on every connection
 io.on('connection', (socket) => {
-  console.log('new connection done!');
+  console.log('new user connected!');
+
+/*
+when a new user is connecting to the app - default username: anonymous
+to do that: add a key to the socket
+the socker - represents each client connected to the socket
+*/
+  //default username
+  socket.username = "anonymous";
+
+  //list on change_username
+  socket.on('change_username', (data) => {
+    socket.username = data.username;
+  });
 });
 
 //set the template engine ejs
