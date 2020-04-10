@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
     })
 
     //listen on typing
-    socket.on('typing', (data) => {
+    socket.on('typing', () => {
     	socket.broadcast.emit('typing', {username : socket.username})
     })
 })
