@@ -1,6 +1,14 @@
 const express = require('express');
 const app = express();
 
+//socket instantiation
+const socket = require('socket.io')(server);
+
+//listen on every connection
+io.on('connection', (socket) => {
+  console.log('new connection done!');
+});
+
 //set the template engine ejs
 app.set('view engine', 'ejs');
 
