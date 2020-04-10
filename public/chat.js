@@ -14,9 +14,20 @@ $(function(){
   var send_username = $("#send_username");
   var chatroom = $("#chatroom");
 
+  //emit a messsage
+  send_message.click(function(){
+    socket.emit('new_message', { message: message.val()});
+  });
+
+  //listen on new_message
+  socket.on('new_message', (data) => {
+    console.log(data);
+    chatroom.append("<p class='message'>" + data.username + ": " + data.message + "</p>");
+  });
+
   //emit an username
   send_username.click(function() {
     console.log(username.val());
-    socket.emit('change_username', {username: username.val()});
+    socket.emit('change_username', { username: username.val() });
   });
 });

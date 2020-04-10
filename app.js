@@ -23,6 +23,12 @@ the socker - represents each client connected to the socket
   socket.on('change_username', (data) => {
     socket.username = data.username;
   });
+
+  //listen on new_messages
+  socket.on('new_message0', (data) => {
+    //broadcast the new message
+    io.sockets.emit('new_message', { message: data.message, username: socket.username });
+  });
 });
 
 //set the template engine ejs
