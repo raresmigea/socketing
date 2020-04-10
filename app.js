@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 
+//listen on port
+server = app.listen(3000);
+
 //socket instantiation
-const socket = require('socket.io')(server);
+const io = require('socket.io')(server);
 
 //listen on every connection
 io.on('connection', (socket) => {
@@ -17,8 +20,5 @@ app.use(express.static('public'));
 
 //routes
 app.get('/', (req, res) => {
-  res.send('hello world');
+  res.render('index');
 });
-
-//listen on port
-server = app.listen(3000);
