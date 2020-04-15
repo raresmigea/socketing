@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 
-
 //set the template engine ejs
 app.set('view engine', 'ejs');
 
@@ -16,8 +15,6 @@ app.get('/', (req, res) => {
 
 //Listen on port 3000
 server = app.listen(3000);
-
-
 
 //socket.io instantiation
 const io = require("socket.io")(server);
