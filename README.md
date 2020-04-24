@@ -1,4 +1,3 @@
-
 <h1 align="center">Welcome to socketing 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
@@ -41,7 +40,7 @@ nodemon start
 
 👤 **raresmigea**
 
-* Github: [@raresmigea](https://github.com/raresmigea)
+- Github: [@raresmigea](https://github.com/raresmigea)
 
 ## 🤝 Contributing
 
@@ -56,5 +55,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2020 [raresmigea](https://github.com/raresmigea).<br />
 This project is [MIT](https://github.com/raresmigea/socketing/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
