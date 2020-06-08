@@ -31,7 +31,7 @@ $(function () {
 
   //Emit typing
   message.bind('keypress', () => {
-    socket.emit('typing');
+    socket.emit('typing...');
   });
 
   //Listen on typing
