@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
     socket.username = data.username;
   });
 
-  //listen on new_message
+  // listen on new_message
   socket.on('new_message', (data) => {
     // broadcast the new message
     io.sockets.emit('new_message', {
